@@ -268,7 +268,7 @@ a {
 }
 
 a:hover {
-    color: #9447d8 !important;
+    color: var(--colorpurple) !important;
     border-bottom-color: transparent;
 }
 
@@ -1276,8 +1276,8 @@ button:hover,
 button.active,
 .button:hover,
 .button.active {
-    box-shadow: inset 0 0 0 1px #9447d8;
-    color: #9447d8 !important;
+    box-shadow: inset 0 0 0 1px var(--colorpurple);
+    color: var(--colorpurple) !important;
 }
 
 input[type="submit"]:active,
@@ -1414,7 +1414,7 @@ button:disabled,
     background-size: cover;
     border-radius: 0;
     min-height: 50em;
-    width: 50%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -1447,7 +1447,8 @@ button:disabled,
     background-color: #000000b8;
     border-radius: 10px;
     padding: 3em;
-    width: 90%;
+    width: 100%;
+    align-items: center;
 }
 
 .panel.inactive {
@@ -1474,6 +1475,9 @@ button:disabled,
 
 .panel.special > .content > .inner > :nth-child(n + 2):nth-last-child(n + 2) {
     margin: 3em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .panel.special.inactive {
@@ -1596,6 +1600,10 @@ button:disabled,
         > .inner
         > :nth-child(n + 2):nth-last-child(n + 2) {
         margin: 2em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1734,7 +1742,7 @@ AUTHOR: https://codepen.io/nicolasjengler
 :root {
     /* --color-bg: #eeedeb;
     --color-title: #0e1c4e; */
-
+    --colorpurple: #8742f5;
     --color-summary-1: #fafaff;
     --color-summary-1-highlight: #b4b3ff;
     --color-summary-2: #fafaff;
@@ -1752,7 +1760,7 @@ AUTHOR: https://codepen.io/nicolasjengler
     border-radius: 4px;
     /* box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); */
     /* max-width: 30em; */
-    width: 90%;
+    width: 70%;
     align-self: center;
 
     h1 {
@@ -1874,22 +1882,41 @@ AUTHOR: https://codepen.io/nicolasjengler
     }
 }
 
-.logoimg {
-    padding: 1em;
+@media (max-width: 980px) {
+    .landingimage {
+        display: none;
+    }
+}
+
+.logobox {
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    width: 200px;
-    object-fit: cover;
+    border: solid white 2px;
+    aspect-ratio: 1/1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 !important;
+}
+
+.logoimg {
+    /* padding: 1em; */
+
+    width: 70%;
+    object-fit: contain;
     background-color: transparent;
-    border: solid 1px rgb(255, 255, 255);
+
     margin-top: 1em !important;
     margin-bottom: 1em !important;
+    fill: var(--colorpurple) !important;
 }
 
 .faqsection {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: start;
 }
 
 .more {
@@ -1899,4 +1926,34 @@ AUTHOR: https://codepen.io/nicolasjengler
     align-items: center;
     flex-grow: 1;
     justify-content: center;
+}
+
+.reserve {
+    background-color: var(--colorpurple) !important;
+    color: white;
+    border: none !important;
+    outline: none !important;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inner header {
+    margin-bottom: 0 !important;
+}
+
+.lineleft {
+    justify-content: start;
+}
+
+.lineleft header {
+    justify-content: start;
+}
+
+.innerleft {
+    display: block !important;
 }
