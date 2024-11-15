@@ -1957,3 +1957,45 @@ AUTHOR: https://codepen.io/nicolasjengler
 .innerleft {
     display: block !important;
 }
+
+.aboutcontainer {
+    display: flex;
+
+    width: 100%;
+    padding-block: 5%;
+    gap: 5%;
+    align-items: center;
+}
+
+.aboutcontainer > * {
+    flex: 1 1 0; /* Each item takes up an equal share of the available space */
+}
+
+.imagesabout {
+    display: flex;
+    height: 400px;
+    width: 300px;
+    background-image: url(https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center 55%; /* Center horizontally, 40% vertically */
+    overflow: hidden;
+}
+
+@media (max-width: 750px) {
+    .aboutcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding-inline: none;
+        padding-block: 2.5%;
+    }
+
+    .aboutcontainer > * {
+        flex-basis: auto; /* Each item takes up an equal share of the available space */
+    }
+
+    .imagesabout {
+        width: 100%;
+    }
+}
