@@ -1935,6 +1935,12 @@ AUTHOR: https://codepen.io/nicolasjengler
     outline: none !important;
 }
 
+.reserve:hover {
+    color: white !important;
+    transform: scale(1.1); /* Use transform for scaling */
+    transition: color 0, 5s ease, transform 0, 5s ease; /* Apply transition to color and transform */
+}
+
 .inner {
     display: flex;
     align-items: center;
@@ -1975,10 +1981,10 @@ AUTHOR: https://codepen.io/nicolasjengler
 .imagesabout {
     display: flex;
     width: 500px;
-    background-image: url(https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(/images/Profile.jpeg);
     background-size: cover;
     border-radius: 5px;
-    background-position: center 55%; /* Center horizontally, 40% vertically */
+    /* background-position: center 55%;  */
     overflow: hidden;
 
     aspect-ratio: 1 / 1;
