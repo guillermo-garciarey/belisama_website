@@ -274,7 +274,7 @@ a:hover {
 
 strong,
 b {
-    color: #555;
+    color: #e91e63;
     font-weight: 500;
 }
 
@@ -1967,19 +1967,21 @@ AUTHOR: https://codepen.io/nicolasjengler
     align-items: center;
 }
 
-.aboutcontainer > * {
-    flex: 1 1 0; /* Each item takes up an equal share of the available space */
-}
+/* Each item takes up an equal share of the available space */
+/* .aboutcontainer > * {
+    flex: 1 1 0; 
+} */
 
 .imagesabout {
     display: flex;
-    height: 400px;
-    width: 300px;
+    width: 500px;
     background-image: url(https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     border-radius: 5px;
     background-position: center 55%; /* Center horizontally, 40% vertically */
     overflow: hidden;
+
+    aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 750px) {
@@ -1997,5 +1999,11 @@ AUTHOR: https://codepen.io/nicolasjengler
 
     .imagesabout {
         width: 100%;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
     }
+}
+
+.innerleft {
+    width: 100%;
 }
