@@ -1981,7 +1981,7 @@ AUTHOR: https://codepen.io/nicolasjengler
 .imagesabout {
     display: flex;
     width: 500px;
-    background-image: url(/images/Profile.jpeg);
+    background-image: url(../../images/Profile.jpeg);
     background-size: cover;
     border-radius: 5px;
     /* background-position: center 55%;  */
